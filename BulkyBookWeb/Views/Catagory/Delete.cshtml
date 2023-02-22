@@ -1,0 +1,31 @@
+﻿@model Catagories
+
+<form method="post" asp-action="DeletePOST">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Catagory</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <input asp-for="Id" hidden/>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" disabled class="form-control" />
+            
+            
+            <label asp-for="DisplayOrder"></label>
+            <input asp-for="DisplayOrder" disabled class="form-control" />
+            
+            <label asp-for="CreatedDateTime"></label>
+            <input asp-for="CreatedDateTime" disabled class="form-control" />
+
+        </div>
+        <button class="btn btn-primary" style="width: 120px">Delete</button>
+        <a asp-controller="Catagories" asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
